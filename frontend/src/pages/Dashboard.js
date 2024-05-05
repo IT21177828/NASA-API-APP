@@ -7,8 +7,6 @@ import Navbar from "../components/Navbar/Navbar";
 const Header = () => {
   const [openNavigation, setOpenNavigation] = useState(false);
   const navigator = useNavigate();
-  const api = process.env.REACT_APP_NASA_API;
-
   return (
     <div className="h-screen lg:backdrop-blur-sm ">
       <Navbar
