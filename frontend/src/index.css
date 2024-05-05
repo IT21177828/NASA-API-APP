@@ -1,0 +1,115 @@
+@import url("https://fonts.googleapis.com/css2?family=Sora:wght@300;400;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Source+Code+Pro:wght@400;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-sora: "Sora", sans-serif;
+  --font-code: "Source Code Pro", monospace;
+  --font-grotesk: "Space Grotesk", sans-serif;
+  --font-montserrat: "Montserrat",  sans-serif;
+  color-scheme: dark;
+}
+
+* {
+  scroll-behavior: smooth
+}
+
+@layer base {
+  body {
+    @apply font-sans bg-[url('./assets/Astro-earth5.jpg')] bg-no-repeat bg-cover m-auto bg-white text-n-1 text-base;
+    background-size: cover; /* This will make the background image cover the entire viewport */
+  }
+}
+
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth; /* Add smooth scrolling behavior */
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* Webkit-based browsers (Chrome, Safari) */
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #888;
+  border-radius: 5px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #000;
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* Firefox */
+/* width */
+html {
+  scrollbar-width: thin;
+}
+
+/* Track */
+html {
+  scrollbar-track-color: #888;
+}
+
+/* Handle */
+html {
+  scrollbar-color: #000 #888;
+}
+
+/* Handle on hover */
+html {
+  scrollbar-color: #000 #555;
+}
+
+/* Edge */
+/* width */
+html {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: thin;  /* Firefox */
+}
+
+/* Track */
+html {
+  -ms-scrollbar-track-color: #888;  /* Edge */
+}
+
+/* Handle */
+html {
+  -ms-scrollbar-color: #000 #888;  /* Edge */
+}
+
+/* Handle on hover */
+html {
+  scrollbar-color: #000 #555;  /* Firefox */
+}
+
+/* Handle on hover */
+html {
+  -ms-scrollbar-color: #000 #555;  /* Edge */
+}
+
