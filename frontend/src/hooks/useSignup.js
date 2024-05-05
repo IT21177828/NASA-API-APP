@@ -39,6 +39,7 @@ export const useSignup = () => {
           });
           setError("");
           setIsLoading(false);
+          navigator("/sign-in")         
         } else {
           setError(response.data.message);
           setIsLoading(false);

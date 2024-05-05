@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useSignup } from "../../hooks/useSignup";
+import NasaLoginIcon from "../../assets/nasaLoginIcon.jpg";
 
 export default function SignUp() {
-  //use isLoading to track loading
-  const { signup, error} = useSignup();
   const navigator = useNavigate();
+  const { signup, error, isLoading } = useSignup();
   const [formField, setFormField] = useState({
     name: "",
     email: "",
@@ -36,13 +36,13 @@ export default function SignUp() {
           <div className="flex h-full flex-wrap items-center justify-center text-neutral-200">
             <div className="h-full lg:w-4/5 mx-auto">
               <div className="block rounded-lg bg-neutral-800/80 shadow-lg border">
-                <div className="g-0 md:flex md:flex-wrap">
-                  <div className="px-4 md:w-1/2 md:px-0">
+                <div className="gap-0 md:flex md:flex-row">
+                  <div className="px-4 md:w-1/2 md:px-0 order-2">
                     <div className="md:px-10 md:pt-10">
                       <div className="pt-8 text-center md:pt-0 mx-auto">
                         <img
                           className="mx-auto h-32 w-32 rounded-full"
-                          src="https://images.unsplash.com/photo-1636614484105-6b199a1fbdca?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                          src={NasaLoginIcon}
                           alt="logo"
                         />
                       </div>
@@ -111,8 +111,9 @@ export default function SignUp() {
 
                         <div className="flex flex-col items-center gap-2 mb-2 pb-1 pt-1 text-center">
                           <button
-                            className="inline-block w-fit rounded px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal tracking-widest text-white border focus:outline-none hover:scale-105 duration-300 transition-all py-2.5 me-2 mb-2"
+                            className="inline-block w-fit rounded px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal tracking-widest text-white border focus:outline-none hover:scale-105 duration-300 transition-all py-2.5 me-2 mb-2 disabled:cursor-not-allowed"
                             type="submit"
+                            disabled={isLoading}
                           >
                             Sign up
                           </button>
@@ -132,7 +133,7 @@ export default function SignUp() {
                     </div>
                   </div>
 
-                  <div className="flex items-center border-l rounded-b-lg bg-[url('https://www.nasa.gov/wp-content/uploads/2023/07/iss069e018537-1.jpg?resize=2000,1333')] bg-cover bg-center opacity-70 max-md:h-96 md:w-1/2 md:rounded-e-lg lg:rounded-bl-none">
+                  <div className="flex items-center border-l order-1 rounded-b-lg bg-[url('https://www.nasa.gov/wp-content/uploads/2023/07/iss069e018537-1.jpg?resize=2000,1333')] bg-cover bg-center opacity-70 max-md:h-96 md:w-1/2 md:rounded-e-lg lg:rounded-bl-none">
                     <div className="mx-4 rounded-xl bg-black px-4 py-6 text-white opacity-80 md:mx-6 md:p-12">
                       <h4 className="mb-6 text-xl font-semibold opacity-100">
                         Explore the Universe

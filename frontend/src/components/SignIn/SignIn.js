@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useLogin } from "../../hooks/useLogin";
 import { useNavigate } from "react-router-dom";
+import NasaLoginIcon from "../../assets/nasaLoginIcon.jpg";
 
 export default function SignIn() {
   const navigator = useNavigate();
@@ -41,7 +42,7 @@ export default function SignIn() {
                       <div className="pt-8 text-center md:pt-0 mx-auto">
                         <img
                           className="mx-auto h-32 w-32 rounded-full"
-                          src="https://images.unsplash.com/photo-1636614484105-6b199a1fbdca?q=80&w=1974&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                          src={NasaLoginIcon}
                           alt="logo"
                         />
                       </div>
@@ -92,7 +93,7 @@ export default function SignIn() {
 
                         <div className="flex flex-col items-center gap-2 mb-2 pb-1 pt-1 text-center">
                           <button
-                            className="inline-block w-fit rounded px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal tracking-widest text-white border focus:outline-none hover:scale-105 duration-300 transition-all py-2.5 me-2 mb-2"
+                            className="inline-block w-fit rounded px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal tracking-widest text-white border focus:outline-none hover:scale-105 duration-300 transition-all py-2.5 me-2 mb-2 disabled:cursor-not-allowed"
                             type="submit"
                             disabled={isLoading}
                           >
