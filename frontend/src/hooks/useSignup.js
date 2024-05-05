@@ -24,7 +24,7 @@ export const useSignup = () => {
         };
 
         const response = await axios.post(
-          "http://localhost:5050/api/v1/users/signup",
+          "https://nasa-api-app-b9y8.onrender.com/api/v1/users/signup",
           {
             headers: { "Content-Type": "application/json" },
             data,
