@@ -1,4 +1,4 @@
-import { useLocation, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import { useState } from "react";
 
 import curve from "../assets/curve.png";
@@ -9,7 +9,7 @@ const Header = () => {
   const navigator = useNavigate();
   const api = process.env.REACT_APP_NASA_API;
   console.log(api);
-  
+
   return (
     <div className="h-screen lg:backdrop-blur-sm ">
       <Navbar

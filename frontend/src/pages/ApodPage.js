@@ -38,9 +38,9 @@ export default function ApodPage() {
       setIsLoading(false);
     }
   };
-
   useEffect(() => {
     fetchData();
+    // eslint-disable-next-line
   }, [currentDate]);
 
   const handleNext = () => {

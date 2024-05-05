@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import { useLocation } from "react-router-dom";
 import { HamburgerMenu } from "../design/Header";
 import MenuSvg from "../../assets/svg/MenuSvg";
@@ -48,7 +48,11 @@ export default function Navbar({ openNavigation, setOpenNavigation }) {
     <div className="fixed top-0 left-0 z-50 bg-black/70 w-full shadow-md shadow-black/40">
       <div className="flex items-center justify-center px-5 lg:px-7.5 xl:px-10 max-lg:py-4">
         <a className="w-[12rem] flex flex-row justify-center" href="/">
-          <img src={NasaLogo} alt="NasaLogo"  className="invert opacity-85 hover:opacity-80 h-8"/>
+          <img
+            src={NasaLogo}
+            alt="NasaLogo"
+            className="invert opacity-85 hover:opacity-80 h-8"
+          />
         </a>
 
         <nav

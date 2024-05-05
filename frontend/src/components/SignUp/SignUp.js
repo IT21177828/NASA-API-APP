@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import axios from "axios";
 import { useSignup } from "../../hooks/useSignup";
 
 export default function SignUp() {
-  const { signup, error, isLoading } = useSignup();
+  //use isLoading to track loading
+  const { signup, error} = useSignup();
   const navigator = useNavigate();
   const [formField, setFormField] = useState({
     name: "",

@@ -1,11 +1,9 @@
-import { useContext, useState } from "react";
-import { useAuthContext } from "./useAuthContext";
+import { useState } from "react";
 import axios from "axios";
 
 export const useSignup = () => {
   const [error, setError] = useState(null);
   const [isLoading, setIsLoading] = useState(null);
-  const { dispatch } = useAuthContext();
 
   const signup = async (formField, setFormField, navigator) => {
     setIsLoading(true);
@@ -40,7 +38,7 @@ export const useSignup = () => {
             password: "",
           });
           setError("");
-          setIsLoading(false);          
+          setIsLoading(false);
         } else {
           setError(response.data.message);
           setIsLoading(false);

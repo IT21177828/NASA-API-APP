@@ -22,9 +22,9 @@ export default function MarsRoverPage() {
 
 
   const API_URL = `https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&api_key=${apiKey}`;
-
   useEffect(() => {
     fetchData();
+    // eslint-disable-next-line
   }, [currentPage]);
 
   const fetchData = async () => {
