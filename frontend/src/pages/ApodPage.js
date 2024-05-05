@@ -71,7 +71,6 @@ export default function ApodPage() {
 
   const openLightbox = () => {
     const images = [{ src: apiData.url, caption: apiData.title }];
-    console.log(images);
     setLightboxImages(images);
     setOpen(true);
   };

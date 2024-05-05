@@ -13,8 +13,6 @@ export const useSignup = () => {
       if (formField.name && formField.email && formField.password) {
         console.log("Form data is valid. Submitting...");
 
-        console.log(formField);
-
         const data = {
           name: formField.name,
           email: formField.email,

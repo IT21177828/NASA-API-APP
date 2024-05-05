@@ -8,7 +8,6 @@ const Header = () => {
   const [openNavigation, setOpenNavigation] = useState(false);
   const navigator = useNavigate();
   const api = process.env.REACT_APP_NASA_API;
-  console.log(api);
 
   return (
     <div className="h-screen lg:backdrop-blur-sm ">

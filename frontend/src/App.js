@@ -22,7 +22,6 @@ function App() {
     return () => clearTimeout(timeout);
   }, [user]);
 
-  console.log(user);
 
   if (isLoading) {
     return (
