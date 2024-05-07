@@ -111,11 +111,31 @@ export default function SignUp() {
 
                         <div className="flex flex-col items-center gap-2 mb-2 pb-1 pt-1 text-center">
                           <button
-                            className="inline-block w-fit rounded px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal tracking-widest text-white border focus:outline-none hover:scale-105 duration-300 transition-all py-2.5 me-2 mb-2 disabled:cursor-not-allowed"
+                            className="flex flex-row gap-1 items-center justify-center w-fit rounded px-6 pb-2 pt-2.5 text-xs font-medium uppercase leading-normal tracking-widest text-white border focus:outline-none hover:scale-105 duration-300 transition-all py-2.5 me-2 mb-2 disabled:cursor-not-allowed"
                             type="submit"
                             disabled={isLoading}
                           >
                             Sign up
+                            {isLoading && (
+                              <div className="flex flex-ro h-fit text-center">
+                                <div className="w-6 h-6 flex items-center justify-center animate-spin">
+                                  <svg
+                                    className="w-6 h-6 text-white"
+                                    viewBox="0 0 24 24"
+                                    fill="none"
+                                    xmlns="http://www.w3.org/2000/svg"
+                                  >
+                                    <path
+                                      d="M12 1V3M12 21V23M4.92929 4.92929L7.05025 7.05025M16.9497 16.9497L19.0707 19.0707M1 12H3M21 12H23M4.92929 19.0707L7.05025 16.9497M16.9497 7.05025L19.0707 4.92929"
+                                      stroke="currentColor"
+                                      strokeWidth="2"
+                                      strokeLinecap="round"
+                                      strokeLinejoin="round"
+                                    />
+                                  </svg>
+                                </div>
+                              </div>
+                            )}
                           </button>
                         </div>
 
@@ -133,7 +153,7 @@ export default function SignUp() {
                     </div>
                   </div>
 
-                  <div className="flex items-center border-l max-md:border-t rounded-b-lg bg-[url('https://www.nasa.gov/wp-content/uploads/2023/07/iss069e018537-1.jpg?resize=2000,1333')] bg-cover bg-center opacity-70 max-md:h-96 md:w-1/2 md:rounded-e-lg lg:rounded-bl-none">
+                  <div className="flex items-center border-r max-md:border-t rounded-lg bg-[url('https://www.nasa.gov/wp-content/uploads/2023/07/iss069e018537-1.jpg?resize=2000,1333')] bg-cover bg-center opacity-70 max-md:h-96 md:w-1/2 md:rounded-e-lg lg:rounded-bl-none">
                     <div className="mx-4 rounded-xl bg-black px-4 py-6 text-white opacity-80 md:mx-6 md:p-12 max-sm:max-h-80 overflow-auto ">
                       <h4 className="mb-6 text-xl font-semibold opacity-100">
                         Explore the Universe
