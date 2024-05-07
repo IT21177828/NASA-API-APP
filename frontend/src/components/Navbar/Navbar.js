@@ -35,7 +35,7 @@ export default function Navbar({ openNavigation, setOpenNavigation }) {
     {
       id: "4",
       title: "Sign out",
-      url: "/sign-out", // Add '/' before the URL
+      url: "/", // Add '/' before the URL
       onlyMobile: true,
     },
   ];
@@ -47,7 +47,7 @@ export default function Navbar({ openNavigation, setOpenNavigation }) {
   return (
     <div className="fixed top-0 left-0 z-50 bg-black/70 w-full shadow-md shadow-black/40">
       <div className="flex items-center justify-center px-5 lg:px-7.5 xl:px-10 max-lg:py-4">
-        <a className="w-[12rem] flex flex-row justify-center" href="/">
+        <a className="w-[12rem] flex flex-row justify-center max-md:justify-start" href="/">
           <img
             src={NasaLogo}
             alt="NasaLogo"

@@ -8,14 +8,14 @@ const Header = () => {
   const [openNavigation, setOpenNavigation] = useState(false);
   const navigator = useNavigate();
   return (
-    <div className="h-screen lg:backdrop-blur-sm ">
+    <div className="h-screen backdrop-blur-sm overflow-auto max-sm:px-2">
       <Navbar
         openNavigation={openNavigation}
         setOpenNavigation={setOpenNavigation}
       />
       <div
         className={`z-2 pt-32 relative w-full h-full border-b border-n-6 ${
-          openNavigation ? "bg-n-8" : "backdrop-blur-sm"
+          openNavigation ? "bg-n-8" : "drop-blur-sbackm"
         }`}
       >
         <div
@@ -41,9 +41,9 @@ const Header = () => {
               Embark on a cosmic journey with us. Let the stars guide your
               exploration into the depths of space.
             </p>
-            <div className="flex max-[905px]:flex-col items-center justify-center gap-20 pt-10 ">
+            <div className="flex max-[905px]:flex-col items-center justify-center gap-20 pt-10 max-md:pb-16 ">
               <div>
-                <div className="relative max-w-sm rounded-lg border border-gray-200 shadow h-64 bg-black">
+                <div className="relative max-w-sm rounded-lg border max-sm:h-fit border-gray-200 shadow h-64 bg-black">
                   <img
                     className="rounded-lg absolute z-5 opacity-50 h-full"
                     src="https://plus.unsplash.com/premium_photo-1689602858109-956b8d1ae80f?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8bWFycyUyMHJvdmVyfGVufDB8fDB8fHww"
@@ -86,7 +86,7 @@ const Header = () => {
                 </div>
               </div>
               <div>
-                <div className="relative max-w-sm rounded-lg border border-gray-200 shadow h-64 z-50 bg-black">
+                <div className="relative max-w-sm rounded-lg max-sm:h-fit border border-gray-200 shadow h-64 z-50 bg-black">
                   <img
                     className="rounded-lg absolute z-5 opacity-50 h-full"
                     src="https://media.istockphoto.com/id/1422030468/photo/couple-stargazing-together-with-a-astronomical-telescope.webp?b=1&s=170667a&w=0&k=20&c=XUwkwyhbt8tRag81RbWtko6VmEJO0Vau5isHRjPIDy4="

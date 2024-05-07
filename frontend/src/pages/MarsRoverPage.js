@@ -126,7 +126,7 @@ export default function MarsRoverPage() {
 
         {!isLoading ? (
           <>
-            <div className="md:columns-3 lg:columns-4 space-y-3 md:px-20">
+            <div className="md:columns-3 lg:columns-4 space-y-3 md:px-20 max-sm:px-2">
               {apiData.map((item, index) => (
                 <div className="transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-[1.01] duration-300">
                   <LazyLoadImage

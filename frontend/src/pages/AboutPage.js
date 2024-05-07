@@ -12,22 +12,22 @@ export default function AboutPage() {
         openNavigation={openNavigation}
         setOpenNavigation={setOpenNavigation}
       />
-      <section class="h-screen backdrop-blur-sm mx-auto pt-24 md:px-40 max-md:px-10 overflow-y-scroll">
+      <section class="h-screen backdrop-blur-sm mx-auto pt-24 max-md:pt-16 md:px-20 max-md:px-6 pb-6 overflow-y-scroll">
         <h1 class="h1">About Us</h1>
-        <p class="body-2 max-md:mb-10">
+        <p class="body-2 max-md:py-4 md:pt-5 md:pb-8">
           Welcome to NASA API, your ultimate destination for exploring the
           wonders of space. We provide a unique experience through our Mars
           rover photo gallery and Astronomy Picture of the Day feature.
         </p>
         <div className="flex flex-row max-md:flex-col place-content-center text-center m-auto">
-          <div className="w-1/2 px-6 flex flex-col items-center justify-center m-auto">
-            <div className="order-2 md:order-1">
+          <div className="w-1/2 max-md:w-full px-6 max-md:px-0 flex flex-col items-center justify-center m-auto">
+            <div className="order-1">
               <svg
                 viewBox="0 0 500 500"
                 xmlns="http://www.w3.org/2000/svg"
                 width="100%"
                 id="blobSvg"
-                className="h-[350px] "
+                className=""
               >
                 <clipPath id="blobClip">
                   <path id="blob" stroke="white" strokeWidth="3">
@@ -42,26 +42,26 @@ export default function AboutPage() {
                 <image href={mars} height="100%" clipPath="url(#blobClip)" />
               </svg>
             </div>
-            <p className="text-justify body-2 max-w-3xl mx-auto order-1 md:order-2">
+            <p className="text-justify body-2 max-w-3xl mx-auto order-2">
               Our Mars rover API offers a captivating glimpse into the Martian
               landscape, showcasing breathtaking images captured by rovers
               exploring the Red Planet. Immerse yourself in the beauty and
               mystery of Mars with our curated photo gallery.
             </p>
           </div>
-          <div className="w-1/2 px-6 flex flex-col items-center justify-center m-auto">
-            <p className="text-justify body-2 max-w-3xl mx-auto">
+          <div className="w-1/2 max-md:w-full md:px-6 flex flex-col items-center justify-center m-auto">
+            <p className="text-justify body-2 max-w-3xl mx-auto max-md:order-2">
               Additionally, don't miss our Astronomy Picture of the Day, where
               we feature stunning images from the cosmos every day. Embark on a
               cosmic journey and marvel at the wonders of our universe.
             </p>
-            <div className="h-72">
+            <div className="max-md:order-1">
               <svg
                 viewBox="0 0 500 500"
                 xmlns="http://www.w3.org/2000/svg"
                 width="100%"
                 id="blobSvg"
-                className="h-[350px]"
+                className=""
               >
                 <clipPath id="blobClip">
                   <path id="blob" stroke="white" strokeWidth="3">

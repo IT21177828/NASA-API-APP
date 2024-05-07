@@ -103,7 +103,7 @@ export default function SignIn() {
                           <a href="#!">Forgot password?</a>
                         </div>
 
-                        <div className="flex flex-row items-center justify-center gap-4 pb-6 mt-6">
+                        <div className="flex flex-row max-sm:flex-col items-center justify-center gap-4 pb-6 mt-6">
                           <p className="mb-0">Don't have an account?</p>
                           <button
                             type="button"
@@ -117,8 +117,8 @@ export default function SignIn() {
                     </div>
                   </div>
 
-                  <div className="flex items-center border-l rounded-b-lg bg-[url('https://www.nasa.gov/wp-content/uploads/2023/07/iss069e018537-1.jpg?resize=2000,1333')] bg-cover bg-center opacity-70 max-md:h-96 md:w-1/2 md:rounded-e-lg lg:rounded-bl-none">
-                    <div className="mx-4 rounded-xl bg-black px-4 py-6 text-white opacity-80 md:mx-6 md:p-12">
+                  <div className="flex items-center border-l max-md:border-t rounded-b-lg bg-[url('https://www.nasa.gov/wp-content/uploads/2023/07/iss069e018537-1.jpg?resize=2000,1333')] bg-cover bg-center opacity-70 max-md:h-96 md:w-1/2 md:rounded-e-lg lg:rounded-bl-none">
+                    <div className="mx-4 rounded-xl bg-black px-4 py-6 text-white opacity-80 md:mx-6 md:p-12 max-sm:max-h-80 overflow-auto ">
                       <h4 className="mb-6 text-xl font-semibold opacity-100">
                         Explore the Universe
                       </h4>
